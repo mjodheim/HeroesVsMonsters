@@ -2,14 +2,14 @@ namespace Domain.Entities;
 
 public abstract class Monster : Character
 {
-    public int Gold { get; protected set; }
-    public int Leather { get; protected set; }
+    public int MonsterGold { get; protected set; }
+    public int MonsterLeather { get; protected set; }
 
-    protected Monster() : base() { }
+    protected Monster() { }
     
-    protected Monster(bool hasGold, bool canBeSkinned)
+    protected Monster(bool hasGold, bool canBeSkinned) : base()
     {
-        Gold = hasGold ? De6.Lance() : 0;
-        Leather = canBeSkinned ? De4.Lance() : 0;
+        MonsterGold = hasGold ? De6.Lance() : 0;
+        MonsterLeather = canBeSkinned ? De4.Lance() : 0;
     }
 }

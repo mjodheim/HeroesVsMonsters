@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Domain;
+using Domain.Entities.Heroes;
 
-Console.WriteLine("Hello, World!");
+// Création d'un plateau de jeu contenant notre héros aléatoire et les monstres
+GameBoard gameBoard = new GameBoard(HeroType.Nain,5);
+
+gameBoard.Run();

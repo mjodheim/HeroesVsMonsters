@@ -1,16 +1,16 @@
 namespace Domain.Entities;
 
-public class Hero : Character
+public abstract class Hero : Character
 {
-    public int Gold { get; protected set; }
-    public int Leather { get; protected set; }
+    public int HeroGold { get; private set; }
+    public int HeroLeather { get; private set; }
     
     protected Hero() : base() { }
 
     public void AddLoot(int gold, int leather)
     {
-        Gold += gold;
-        Leather += leather;
+        HeroGold += gold;
+        HeroLeather += leather;
     }
     
 }

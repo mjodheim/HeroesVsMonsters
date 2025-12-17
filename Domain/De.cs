@@ -2,10 +2,12 @@ namespace Domain;
 
 public class De
 {
-    public int Minimum { get; }
-    public int Maximum { get; }
+    private int Minimum { get; }
+    private int Maximum { get; }
 
-    private static readonly Random random = new Random();
+    private readonly Random _random = new Random();
+
+    protected De() { }
     
     public De(int minimum, int maximum)
     {
@@ -13,5 +15,5 @@ public class De
         Maximum = maximum;
     }
 
-    public int Lance() => random.Next(Minimum, Maximum + 1);
+    public int Lance() => _random.Next(Minimum, Maximum + 1);
 }
